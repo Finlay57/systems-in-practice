@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Systems in Practice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a class="logo" href="/">Systems in Practice</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/binary">Binary</a>
+            <a href="#">Password</a>
+            <a href="#">About</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <p>Built with Flask · Deployed on Azure</p>
+</footer>
+
+</body>
+</html>

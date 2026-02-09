@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Binary → Decimal Converter</h1>
+
+<p>
+    Computers represent numbers using base 2 (binary), while humans typically use
+    base 10 (decimal). This tool demonstrates how binary values are converted.
+</p>
+
+<div class="tool">
+    <label for="binaryInput">Binary number</label>
+    <input type="text" id="binaryInput" placeholder="e.g. 101101">
+
+    <button onclick="convertBinary()">Convert</button>
+
+    <p id="result"></p>
+</div>
+
+<script src="{{ url_for('static', filename='js/binary.js') }}"></script>
+{% endblock %}

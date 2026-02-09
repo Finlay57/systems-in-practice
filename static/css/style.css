@@ -70,3 +70,11 @@ body {
     font-size: 1rem;
     cursor: pointer;
 }
+.tool h3 {
+    margin-top: 0;
+}
+
+#result {
+    margin-top: 2rem;
+    font-weight: bold;
+}

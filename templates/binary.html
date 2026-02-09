@@ -9,13 +9,24 @@
 </p>
 
 <div class="tool">
+    <h3>Binary → Decimal</h3>
+
     <label for="binaryInput">Binary number</label>
     <input type="text" id="binaryInput" placeholder="e.g. 101101">
 
-    <button onclick="convertBinary()">Convert</button>
-
-    <p id="result"></p>
+    <button onclick="convertBinaryToDecimal()">Convert to Decimal</button>
 </div>
+
+<div class="tool">
+    <h3>Decimal → Binary</h3>
+
+    <label for="decimalInput">Decimal number</label>
+    <input type="number" id="decimalInput" placeholder="e.g. 45">
+
+    <button onclick="convertDecimalToBinary()">Convert to Binary</button>
+</div>
+
+<p id="result"></p>
 
 <script src="{{ url_for('static', filename='js/binary.js') }}"></script>
 {% endblock %}

@@ -1,7 +1,7 @@
 # Systems in Practice
 
 Systems in Practice is a personal portfolio designed to demonstrate practical software
-engineering skills, core computer science concepts, and cloud deployment using Microsoft
+engineering skills, core computing science concepts, and cloud deployment using Microsoft
 Azure.
 
 ## Tech Stack

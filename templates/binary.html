@@ -1,32 +1,81 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Binary → Decimal Converter</h1>
+
+<h2>Binary & Decimal Converter</h2>
 
 <p>
     Computers represent numbers using base 2 (binary), while humans typically use
-    base 10 (decimal). This tool demonstrates how binary values are converted.
+    base 10 (decimal). This page demonstrates how values are converted between
+    the two systems, step by step.
 </p>
+
+<hr>
+
+<!-- ================= Binary -> Decimal ================= -->
 
 <div class="tool">
     <h3>Binary → Decimal</h3>
 
-    <label for="binaryInput">Binary number</label>
-    <input type="text" id="binaryInput" placeholder="e.g. 101101">
+    <form method="post">
+        <label for="binary">Binary number</label><br>
+        <input
+            type="text"
+            name="binary"
+            id="binary"
+            placeholder="e.g. 1011"
+            required
+        >
+        <br><br>
 
-    <button onclick="convertBinaryToDecimal()">Convert to Decimal</button>
+        <button type="submit" name="conversion" value="bin_to_dec">
+            Convert to Decimal
+        </button>
+    </form>
 </div>
+
+<hr>
+
+<!-- ================= Decimal -> Binary ================= -->
 
 <div class="tool">
     <h3>Decimal → Binary</h3>
 
-    <label for="decimalInput">Decimal number</label>
-    <input type="number" id="decimalInput" placeholder="e.g. 45">
+    <form method="post">
+        <label for="decimal">Decimal number</label><br>
+        <input
+            type="number"
+            name="decimal"
+            id="decimal"
+            placeholder="e.g. 13"
+            required
+        >
+        <br><br>
 
-    <button onclick="convertDecimalToBinary()">Convert to Binary</button>
+        <button type="submit" name="conversion" value="dec_to_bin">
+            Convert to Binary
+        </button>
+    </form>
 </div>
 
-<p id="result"></p>
+<hr>
 
-<script src="{{ url_for('static', filename='js/binary.js') }}"></script>
+<!-- ================= Result ================= -->
+
+{% if result is not none %}
+    <h3>Result</h3>
+    <p><strong>{{ result }}</strong></p>
+{% endif %}
+
+<!-- ================= Step-by-step explanation ================= -->
+
+{% if steps and steps|length > 0 %}
+    <h3>Step-by-step explanation</h3>
+    <ol>
+        {% for step in steps %}
+            <li>{{ step }}</li>
+        {% endfor %}
+    </ol>
+{% endif %}
+
 {% endblock %}

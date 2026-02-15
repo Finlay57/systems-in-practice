@@ -1,18 +1,64 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Systems in Practice</h1>
 
-<p>
-    Systems in Practice is a portfolio project demonstrating practical
-    software engineering skills, core computer science concepts, and modern
-    cloud deployment practices.
-</p>
+<section style="max-width: 900px; margin: auto; line-height: 1.6;">
 
-<h2>What’s included?</h2>
-<ul>
-    <li>Binary ↔ Decimal conversion</li>
-    <li>Password strength analysis with AI-assisted feedback</li>
-    <li>REST API demonstrations</li>
-</ul>
+    <h1 style="font-size: 2.5rem;">Finlay Anderson</h1>
+    <p style="font-size: 1.2rem; color: #555;">
+        Computer Science student focused on building clear, reliable software systems.
+    </p>
+
+    <hr style="margin: 30px 0;">
+
+    <h2>Systems in Practice</h2>
+    <p>
+        This website acts as a small technical portfolio.
+        Instead of presenting only static projects, it hosts working tools that demonstrate
+        backend logic, validation, and structured design.
+    </p>
+
+    <p>
+        The goal is to show how theoretical computing concepts translate into real software —
+        prioritising correctness, readability, and maintainability over unnecessary complexity.
+    </p>
+
+    <div style="margin: 25px 0;">
+        <a href="/binary" style="
+            padding: 10px 18px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-right: 10px;
+        ">Open Binary Converter</a>
+
+        <a href="/about" style="
+            padding: 10px 18px;
+            border: 1px solid #222;
+            color: #222;
+            text-decoration: none;
+            border-radius: 6px;
+        ">About This Project</a>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>What This Demonstrates</h2>
+    <ul>
+        <li>Flask routing and templating</li>
+        <li>Backend validation and error handling</li>
+        <li>Algorithm implementation with step-by-step output</li>
+        <li>Separation of frontend and backend responsibilities</li>
+    </ul>
+
+    <h2>Why This Matters</h2>
+    <p>
+        Many projects focus primarily on visuals or frameworks.
+        This project instead focuses on core engineering fundamentals —
+        ensuring the logic is correct, understandable, and maintainable.
+    </p>
+
+</section>
+
 {% endblock %}

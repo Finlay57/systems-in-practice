@@ -94,6 +94,10 @@ def api_fact():
     return jsonify({
         "fact": "Computers store all data as binary, but humans are much better at base 10."
     })
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

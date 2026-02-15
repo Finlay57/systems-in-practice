@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Binary Converter</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
 
 <h1>Binary Conversions</h1>
 
@@ -19,7 +15,7 @@
         placeholder="Enter decimal number"
         value="{{ decimal_input or '' }}"
     >
-    <button type="submit">Convert</button>
+    <button type="submit" name="conversion" value="d2b">Convert</button>
 </form>
 
 {% if d2b_error %}
@@ -37,7 +33,6 @@
 
 <hr>
 
-<!-- Binary → Decimal -->
 <h2>Binary → Decimal</h2>
 
 <form method="POST">
@@ -47,7 +42,7 @@
         placeholder="Enter binary number"
         value="{{ binary_input or '' }}"
     >
-    <button type="submit">Convert</button>
+    <button type="submit" name="conversion" value="b2d">Convert</button>
 </form>
 
 {% if b2d_error %}
@@ -63,6 +58,4 @@
     </ul>
 {% endif %}
 
-
-</body>
-</html>
+{% endblock %}

@@ -1,10 +1,33 @@
+/* ---------- Base ---------- */
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     margin: 0;
     background-color: #f7f7f7;
     color: #222;
+    line-height: 1.5;
 }
 
+h1, h2 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* ---------- Layout ---------- */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* ---------- Navbar ---------- */
 .navbar {
     background-color: #111;
     padding: 1rem 0;
@@ -17,17 +40,25 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
+    flex-wrap: wrap; /* mobile wrap */
 }
 
 .logo {
     color: #00e5ff;
     text-decoration: none;
     font-weight: bold;
+    white-space: nowrap; /* stops awkward wrapping */
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap; /* mobile wrap */
 }
 
 .nav-links a {
     color: #ddd;
-    margin-left: 1rem;
     text-decoration: none;
 }
 
@@ -35,20 +66,17 @@ body {
     color: #fff;
 }
 
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 3rem auto;
-}
-
+/* ---------- Footer ---------- */
 .footer {
     text-align: center;
     padding: 2rem;
     font-size: 0.9rem;
     color: #666;
 }
+
+/* ---------- Tool styling (binary converter etc.) ---------- */
 .tool {
-    max-width: 400px;
+    max-width: 500px;
     margin-top: 2rem;
 }
 
@@ -60,56 +88,60 @@ body {
 
 .tool input {
     width: 100%;
-    padding: 0.6rem;
+    padding: 0.7rem;
     font-size: 1rem;
     margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
 .tool button {
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1rem;
     font-size: 1rem;
     cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: #fff;
 }
+
+.tool button:hover {
+    opacity: 0.92;
+}
+
 .tool h3 {
     margin-top: 0;
 }
 
 #result {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     font-weight: bold;
 }
-body {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #222;
-}
 
-.container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    margin-top: 30px;
-}
+/* ---------- Mobile improvements ---------- */
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+        padding: 18px;
+        margin: 1rem auto;
+        border-radius: 12px;
+    }
 
-h1, h2 {
-    font-weight: 600;
-}
+    h1 {
+        font-size: 1.8rem;
+    }
 
-hr {
-    border: none;
-    border-top: 1px solid #ddd;
-}
+    h2 {
+        font-size: 1.25rem;
+    }
 
-.navbar {
-    background: #222;
-    color: white;
-}
+    /* Make forms easy to tap */
+    input, button {
+        width: 100%;
+    }
 
-.navbar a {
-    color: white;
+    /* Make nav links more tappable */
+    .nav-links a {
+        padding: 6px 8px;
+    }
 }
-
-.navbar a:hover {
-    opacity: 0.8;
-}
-
